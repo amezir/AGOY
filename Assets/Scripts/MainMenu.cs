@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void ReplayGame()
+    {
+        // Charger la scène de jeu
+        SceneManager.LoadScene("General-scene");
+    }
+
     public void QuitGame()
     {
         // Quitter l'application
