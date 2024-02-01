@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
         {
             remainingTime = 0;
             SceneManager.LoadScene("Lose");
+            Cursor.visible = true;
         }
         int minutes = Mathf.FloorToInt(remainingTime / 60f);
         int seconds = Mathf.FloorToInt(remainingTime - minutes * 60);
