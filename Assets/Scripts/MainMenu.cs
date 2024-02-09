@@ -5,27 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    /// <summary>
+    /// Charger la scène de jeu
+    /// </summary>
     public void PlayGame()
     {
-        // Charger la scène de jeu
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
     public void ReplayGame()
     {
-        // Charger la scène de jeu
         SceneManager.LoadScene("General-scene");
     }
 
     public void MenuGame()
     {
-        // Charger la scène de jeu
         SceneManager.LoadScene("Main scene");
     }
-
+    /// <summary>
+    /// Quitter le jeu
+    /// </summary>
     public void QuitGame()
     {
-        // Quitter l'application
         Application.Quit();
     }
 }

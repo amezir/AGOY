@@ -37,6 +37,9 @@ public class PlayerFPS : MonoBehaviour
     // Limite de rotation verticale de la caméra
     public float rotationXLimit = 60f;
 
+    /// <summary>
+    /// Start
+    /// </summary>
     void Start()
     {
         // Cacher le curseur de la souris au démarrage
@@ -46,6 +49,9 @@ public class PlayerFPS : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    /// <summary>
+    /// Update
+    /// </summary>
     void Update()
     {
         // Mettre à jour le mouvement du joueur et la rotation de la caméra
@@ -53,6 +59,9 @@ public class PlayerFPS : MonoBehaviour
         UpdateCameraRotation();
     }
 
+    /// <summary>
+    /// Update movement of the player character based on user input
+    /// </summary>
     void UpdateMovement()
     {
         // Direction locale avant et droite du joueur
@@ -105,6 +114,9 @@ public class PlayerFPS : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
     }
 
+    /// <summary>
+    /// Update camera rotation
+    /// </summary>
     void UpdateCameraRotation()
     {
         // Rotation verticale de la caméra en fonction du mouvement de la souris
