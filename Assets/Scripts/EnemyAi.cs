@@ -10,7 +10,7 @@ public class EnemyAi : MonoBehaviour
     NavMeshAgent agent;
 
     [SerializeField]
-    private float baseSpeed = 7f; // Vitesse de déplacement de base de l'agent
+    private float baseSpeed = 6f; // Vitesse de déplacement de base de l'agent
 
     void Start()
     {
@@ -33,12 +33,12 @@ public class EnemyAi : MonoBehaviour
         agent.transform.rotation = targetRotation;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        // Vérifier si l'agent entre en collision avec le joueur
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has been caught");
+            SceneManager.LoadScene("Lose");
+            Cursor.visible = true;
         }
     }
 
