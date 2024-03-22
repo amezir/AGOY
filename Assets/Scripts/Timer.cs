@@ -11,9 +11,7 @@ public class Timer : MonoBehaviour
     // Temps restant
     [SerializeField] float remainingTime;
 
-    /// <summary>
-    /// Timer Start function 
-    /// </summary>
+    // Timer Start function
     void Update()
     {
         // Mettre à jour le temps restant

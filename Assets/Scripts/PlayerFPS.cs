@@ -48,10 +48,7 @@ public class PlayerFPS : MonoBehaviour
 
     // Drapeau indiquant si le sprint est en cours ou en pause
     bool sprinting = false;
-
-    /// <summary>
-    /// Start
-    /// </summary>
+    // Start
     void Start()
     {
         // Cacher le curseur de la souris au démarrage
