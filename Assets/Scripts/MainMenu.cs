@@ -14,12 +14,12 @@ public class MainMenu : MonoBehaviour
     }
     public void ReplayGame()
     {
-        SceneManager.LoadScene("General-scene");
+        SceneManager.LoadScene("Jeu");
     }
 
     public void MenuGame()
     {
-        SceneManager.LoadScene("Main scene");
+        SceneManager.LoadScene("Menu");
     }
     /// <summary>
     /// Quitter le jeu
