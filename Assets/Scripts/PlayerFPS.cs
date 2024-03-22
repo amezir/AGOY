@@ -37,6 +37,18 @@ public class PlayerFPS : MonoBehaviour
     // Limite de rotation verticale de la caméra
     public float rotationXLimit = 60f;
 
+    // Temps écoulé depuis le début du sprint
+    float sprintTimer = 0f;
+
+    // Durée du sprint
+    public float sprintDuration = 5f;
+
+    // Durée de la pause entre les sprints
+    public float sprintCooldown = 10f;
+
+    // Drapeau indiquant si le sprint est en cours ou en pause
+    bool sprinting = false;
+
     /// <summary>
     /// Start
     /// </summary>
@@ -87,8 +99,30 @@ public class PlayerFPS : MonoBehaviour
         float speedMultiplier = walkingSpeed;
 
         // Changer le multiplicateur de vitesse en fonction de l'état du joueur
-        if (isRunning)
+        if (isRunning && !sprinting && sprintTimer <= 0)
+        {
+            sprinting = true;
+            sprintTimer = sprintDuration;
+            Debug.Log("Sprint activé");
+        }
+
+        if (sprinting)
+        {
             speedMultiplier = runningSpeed;
+            sprintTimer -= Time.deltaTime;
+
+            if (sprintTimer <= 0)
+            {
+                sprinting = false;
+                sprintTimer = sprintCooldown;
+                Debug.Log("Sprint désactivé");
+            }
+        }
+        else
+        {
+            if (sprintTimer > 0)
+                sprintTimer -= Time.deltaTime;
+        }
 
         if (isCrouching)
             speedMultiplier = crouchingSpeed;

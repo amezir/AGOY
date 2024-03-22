@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class EnemyAi : MonoBehaviour
 {
-    public Transform playerTransform;
-    NavMeshAgent agent;
+    [SerializeField]
+    private Transform playerTransform;
+
+    private NavMeshAgent agent;
 
     [SerializeField]
     private float baseSpeed = 6f; // Vitesse de déplacement de base de l'agent
