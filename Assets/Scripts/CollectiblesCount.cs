@@ -26,7 +26,7 @@ public class CollectiblesCount : MonoBehaviour
 
         if (collectiblesCount >= 6)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Win");
             Cursor.visible = true;
         }
     }
