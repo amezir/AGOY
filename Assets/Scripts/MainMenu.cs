@@ -6,23 +6,28 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     /// <summary>
-    /// Charger la scène de jeu
+    /// Load the game scene
     /// </summary>
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    /// <summary>
+    /// Replay the game from the beginning
+    /// </summary>
     public void ReplayGame()
     {
         SceneManager.LoadScene("Jeu");
     }
-
+    /// <summary>
+    /// Return to the main menu
+    /// </summary>
     public void MenuGame()
     {
         SceneManager.LoadScene("Menu");
     }
     /// <summary>
-    /// Quitter le jeu
+    /// Quit the game
     /// </summary>
     public void QuitGame()
     {

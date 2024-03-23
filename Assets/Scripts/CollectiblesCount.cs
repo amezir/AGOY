@@ -8,22 +8,26 @@ public class CollectiblesCount : MonoBehaviour
     int collectiblesCount = 0;
     int totalCollectibles;
 
+    ///<summary>
+    /// Retrieve the total number of collectibles in the scene
+    ///</summary>
     void Start()
     {
-        // Obtient le nombre total de collectibles dans la scène
         totalCollectibles = GameObject.FindGameObjectsWithTag("Collectible").Length;
     }
 
+    ///<summary>
+    /// Increment the count of collected collectibles and update the text displaying the number of collected collectibles
+    ///</summary>
     public void IncreaseCollectiblesCount()
     {
         collectiblesCount++;
         text.text = collectiblesCount.ToString();
 
-        // Vérifie si tous les collectibles ont été collectés
-        if (collectiblesCount >= 6) // Vérifie si le nombre de collectibles collectés est égal à 6
+        if (collectiblesCount >= totalCollectibles)
         {
-            // Charge la scène du menu
             SceneManager.LoadScene("Menu");
+            Cursor.visible = true;
         }
     }
 }
