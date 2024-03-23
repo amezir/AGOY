@@ -1007,9 +1007,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Explorez un cirque abandonn\xE9 hant\xE9 par un clown vengeur. En 10 minutes,
-    d\xE9nichez 5 objets cruciaux tout en \xE9vitant le clown mal\xE9fique. Sautez
-    des obstacles, survivez \xE0 cette course contre la montre terrifiante.\n\nOserez-vous
+  m_text: "Explorez un cirque abandonn\xE9 hant\xE9 par un clown vengeur. En 6 minutes,
+    d\xE9nichez 6 objets cruciaux tout en \xE9vitant le clown mal\xE9fique. Sautez
+    des obstacles, survivez \xE0 cette course contre la montre terrifiante.\r\n\r\nOserez-vous
     affronter le destin dans ce cirque maudit ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -24,7 +24,7 @@ public class CollectiblesCount : MonoBehaviour
         collectiblesCount++;
         text.text = collectiblesCount.ToString();
 
-        if (collectiblesCount >= totalCollectibles)
+        if (collectiblesCount >= 6)
         {
             SceneManager.LoadScene("Menu");
             Cursor.visible = true;
